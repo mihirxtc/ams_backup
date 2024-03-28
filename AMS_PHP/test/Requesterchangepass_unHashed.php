@@ -1,3 +1,4 @@
+<!-- Requestchangepass file with un-hashed version -->
 <?php
 define('TITLE', 'Change Password');
 define('PAGE', 'Requesterchangepass');

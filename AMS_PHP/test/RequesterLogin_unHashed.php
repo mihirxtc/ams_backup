@@ -1,4 +1,4 @@
-<!-- without hashing password logic -->
+<!-- RequesterLogin file with un-hashed version -->
 <?php
 include('../dbConnection.php');
 session_start();
