@@ -1,4 +1,4 @@
-<!-- hash password logic -->
+<!-- without hash password logic -->
 <?php
   include('dbConnection.php');
 
@@ -16,8 +16,7 @@
         $rName = $_REQUEST['rName'];
         $rEmail = $_REQUEST['rEmail'];
         $rPassword = $_REQUEST['rPassword'];
-        $hashPassword = password_hash($rPassword, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES ('$rName','$rEmail', '$hashPassword')";
+        $sql = "INSERT INTO requesterlogin_tb(r_name, r_email, r_password) VALUES ('$rName','$rEmail', '$rPassword')";
         if($conn->query($sql) == TRUE){
           $regmsg = '<div class="alert alert-success mt-2" role="alert"> Account Succefully Created </div>';
         } else {

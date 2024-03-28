@@ -84,7 +84,7 @@
         <h4 class="mt-4">Electronic Appliances</h4>
       </div>
       <div class="col-sm-4 mb-4">
-        <a href="#"><i class="fas fa-sliders-h fa-8x text-primary"></i></a>
+        <a href="#"><i class="fas fa-sliders-h fa-8x text-danger"></i></a>
         <h4 class="mt-4">Preventive Maintenance</h4>
       </div>
       <div class="col-sm-4 mb-4">
@@ -110,7 +110,7 @@
           <div class="card shadow-lg mb-2">
             <div class="card-body text-center">
               <img src="images/avtar1.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Mihir Menon</h4>
+              <h4 class="card-title">Kuldeep S</h4>
               <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
                 ducimus voluptas
                 nesciunt debitis numquam.</p>
@@ -123,7 +123,7 @@
           <div class="card shadow-lg mb-2">
             <div class="card-body text-center">
               <img src="images/avtar2.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Sonam Sharma</h4>
+              <h4 class="card-title">Vidhi Modi</h4>
               <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
                 ducimus voluptas
                 nesciunt debitis numquam.</p>
@@ -136,7 +136,7 @@
           <div class="card shadow-lg mb-2">
             <div class="card-body text-center">
               <img src="images/avtar3.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Karan Soni</h4>
+              <h4 class="card-title">Aryan Panchal</h4>
               <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
                 ducimus voluptas
                 nesciunt debitis numquam.</p>
@@ -149,7 +149,7 @@
           <div class="card shadow-lg mb-2">
             <div class="card-body text-center">
               <img src="images/avtar4.jpeg" class="img-fluid" style="border-radius: 100px;">
-              <h4 class="card-title">Poonam Shah</h4>
+              <h4 class="card-title">Harsha K</h4>
               <p class="card-text">Itaque illo explicabo voluptatum, saepe libero rerum, ad
                 ducimus voluptas
                 nesciunt debitis numquam.</p>
@@ -211,7 +211,7 @@
           <!-- Start Footer 2nd Column -->
           <small> Designed by xtc &copy; 2024.
           </small>
-          <!-- <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small> -->
+          <small class="ml-2"><a href="Admin/login.php">Admin Login</a></small>
         </div> <!-- End Footer 2nd Column -->
       </div> <!-- End Footer Row -->
     </div> <!-- End Footer Container -->

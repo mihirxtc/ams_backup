@@ -1,31 +1,22 @@
-<!-- hashed password logic -->
+<!-- without hashing password logic -->
 <?php
 include('../dbConnection.php');
 session_start();
-
-if (!isset($_SESSION['is_login'])) {
-  if (isset($_REQUEST['rEmail'])) {
-    $rEmail = mysqli_real_escape_string($conn, trim($_REQUEST['rEmail']));
-
-    // Check if email exists
-    $sql = "SELECT r_email, r_password FROM requesterlogin_tb WHERE r_email='" . $rEmail . "' LIMIT 1";
+if(!isset($_SESSION['is_login'])){
+  if(isset($_REQUEST['rEmail'])){
+    $rEmail = mysqli_real_escape_string($conn,trim($_REQUEST['rEmail']));
+    $rPassword = mysqli_real_escape_string($conn,trim($_REQUEST['rPassword']));
+    $sql = "SELECT r_email, r_password FROM requesterlogin_tb WHERE r_email='".$rEmail."' AND r_password='".$rPassword."' limit 1";
     $result = $conn->query($sql);
-
-    if ($result->num_rows == 1) {
-      $row = $result->fetch_assoc();
-      $hashedPassword = $row['r_password']; // Retrieve hashed password
-
-      // Verify entered password with hashed password
-      if (password_verify($_REQUEST['rPassword'], $hashedPassword)) {
-        $_SESSION['is_login'] = true;
-        $_SESSION['rEmail'] = $rEmail;
-        echo "<script> location.href='RequesterProfile.php'; </script>";
-        exit;
-      } else {
-        $msg = '<div class="alert alert-warning mt-2" role="alert"> Entered Password is Incorrect </div>';
-      }
+    if($result->num_rows == 1){
+      
+      $_SESSION['is_login'] = true;
+      $_SESSION['rEmail'] = $rEmail;
+      // Redirecting to RequesterProfile page on Correct Email and Pass
+      echo "<script> location.href='RequesterProfile.php'; </script>";
+      exit;
     } else {
-      $msg = '<div class="alert alert-warning mt-2" role="alert"> Email Address Not Found </div>';
+      $msg = '<div class="alert alert-warning mt-2" role="alert"> Enter Valid Email and Password </div>';
     }
   }
 } else {
