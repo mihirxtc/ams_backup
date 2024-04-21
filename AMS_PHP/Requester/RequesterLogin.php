@@ -61,7 +61,7 @@ if (!isset($_SESSION['is_login'])) {
     <span>Annual Maitenance Service</span>
   </div>
   <p class="text-center" style="font-size: 20px;"> <i class="fas fa-user-secret text-danger"></i> <span>Requester
-      Area(Demo)</span>
+      Login</span>
   </p>
   <div class="container-fluid mb-5">
     <div class="row justify-content-center custom-margin">
