@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2024 at 08:49 AM
+-- Generation Time: Apr 24, 2024 at 08:21 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -39,7 +39,7 @@ CREATE TABLE `adminlogin_tb` (
 --
 
 INSERT INTO `adminlogin_tb` (`a_login_id`, `a_name`, `a_email`, `a_password`) VALUES
-(1, 'Mihir Menon', 'admin@gmail.com', '123456');
+(1, 'admin', 'admin@gmail.com', '123456');
 
 -- --------------------------------------------------------
 
@@ -62,9 +62,9 @@ CREATE TABLE `assets_tb` (
 --
 
 INSERT INTO `assets_tb` (`pid`, `pname`, `pdop`, `pava`, `ptotal`, `poriginalcost`, `psellingcost`) VALUES
-(1, 'Keyboard', '2018-10-03', 3, 10, 400, 500),
-(3, 'Mouse', '2018-10-02', 18, 30, 500, 600),
-(4, 'Rode Mic', '2018-10-20', 9, 10, 15000, 18000);
+(5, 'Monitor', '2024-04-22', 98, 100, 6500, 7000),
+(6, 'Keyboard', '2024-04-22', 150, 150, 1350, 1500),
+(7, 'Mouse', '2024-04-22', 195, 200, 450, 500);
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,9 @@ CREATE TABLE `assignwork_tb` (
 --
 
 INSERT INTO `assignwork_tb` (`rno`, `request_id`, `request_info`, `request_desc`, `requester_name`, `requester_add1`, `requester_add2`, `requester_city`, `requester_state`, `requester_zip`, `requester_email`, `requester_mobile`, `assign_tech`, `assign_date`) VALUES
-(13, 56, 'Samsung Led', 'Model - 202100008011', 'Harsha', 'Lane-123', 'James Bond colony', 'Kannur', 'Kerala', 670301, 'harsha@gmail.com', 8128429890, 'Jack Dorsey', '2024-03-28');
+(14, 58, 'Panasonic LED TV', 'Model - 202100008011, display is blank not working', 'Mihir Menon', 'B-18, Alfa Park Society ', 'Motera Road, Sabaramati', 'Ahmedabad', 'Gujarat', 38005, 'mihir@gmail.com', 8128429890, 'Modern India Technicians', '2024-04-24'),
+(15, 59, 'Toshiba Air Conditioner', 'model: 202180118011,  Motor Service', 'Aryan Panchal', 'G-78, New Sarovar Apartment', 'Nehrunagar Road, Zansi ki Rani', 'Ahmedabad', 'Gujarat', 380008, 'aryanpanchal123@gmail.com', 7357544893, 'Modern India Technicians', '2024-04-24'),
+(16, 60, 'Samsung Fridge', 'Model: 202100998282024, cooling is not working', 'Karan Soni', 'B-123, New pearl avenue', 'Vastrapur', 'Ahmedabad', 'Gujarat', 380006, 'karansoni81023@gmail.com', 9099999999, 'Modern India Technicians', '2024-04-25');
 
 -- --------------------------------------------------------
 
@@ -118,27 +120,8 @@ CREATE TABLE `customer_tb` (
 --
 
 INSERT INTO `customer_tb` (`custid`, `custname`, `custadd`, `cpname`, `cpquantity`, `cpeach`, `cptotal`, `cpdate`) VALUES
-(1, 'Shukla', 'Bokaro', 'Mouse', 1, 600, 600, '2018-10-13'),
-(2, 'Pandey ji', 'Ranchi', 'Mouse', 2, 600, 600, '2018-10-13'),
-(3, 'Musaddi Lal', 'Bokaro', 'Mouse', 5, 600, 3000, '2018-10-13'),
-(4, 'Jay Ho', 'Ranchi', 'Mouse', 2, 600, 1200, '2018-10-13'),
-(5, 'something', 'somethingadd', 'Mouse', 1, 600, 600, '2018-10-13'),
-(6, 'someone', 'someoneadd', 'Keyboard', 1, 500, 500, '2018-10-13'),
-(7, 'jay', 'jay ho', 'Keyboard', 1, 500, 500, '2018-10-09'),
-(8, 'Jay', 'Bokaro', 'Keyboard', 2, 500, 1000, '2018-10-21'),
-(9, 'Kumar', 'Bokaro', 'Keyboard', 1, 500, 500, '2018-10-20'),
-(10, 'kkk', 'asdsa', 'Keyboard', 1, 500, 500, '2018-10-20'),
-(11, 'Shukla Ji', 'Ranchi', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(19, 'sdsads', 'dasdsa', 'Keyboard', 1, 500, 500, '2018-10-20'),
-(20, 'asdas', 'asdsad', 'Keyboard', 1, 500, 500, '2018-10-20'),
-(21, 'dsadas', 'asdasd', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(22, 'sdfsdf', 'dfsdf', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(23, 'Ramu', 'sadsad', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(24, 'gfdgfdg', 'fgfdgfdg', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(25, 'rrr', 'fgdf', 'Mouse', 1, 600, 600, '2018-10-20'),
-(26, 'Jay', 'ranchi', 'Samsung LCD', 1, 12000, 12000, '2018-10-20'),
-(27, 'dfsdfsd', 'sdfdsf', 'Mouse', 1, 600, 600, '2018-10-20'),
-(28, 'Kunal', 'Ranchi', 'Rode Mic', 1, 18000, 18000, '2018-10-20');
+(29, 'Aryan Panchal', 'B-21 Shreenath Apartment', 'Monitor', 2, 7000, 14000, '2024-04-22'),
+(30, 'Jay Prajapati', 'B-123 ABC apartment', 'Mouse', 5, 500, 2500, '2024-04-24');
 
 -- --------------------------------------------------------
 
@@ -158,10 +141,12 @@ CREATE TABLE `requesterlogin_tb` (
 --
 
 INSERT INTO `requesterlogin_tb` (`r_login_id`, `r_name`, `r_email`, `r_password`) VALUES
-(12, 'Mihir Menon', 'mihirxtc@gmail.com', '123'),
-(13, '  Karan Jackson', 'karansoni81023@gmail.com', '123'),
-(14, 'Kuldeep Solanki', 'kuldeepsolanki@gmail.com', '123'),
-(15, 'Harsha ', 'harsha@gmail.com', '123');
+(17, 'Mihir Menon', 'mihir@gmail.com', '$2y$10$kAxTTA3Fmf9xDtABJSI9TOTSayf40/klqrqNZnSOG.mrkYd8HA7MW'),
+(19, 'Karan Soni', 'karan@gmail.com', '$2y$10$iNKuVh.6DUGChep9zQ38EOym23udpbevZS1kPx1yuIiqm9yHusUGi'),
+(20, 'Jay Prajapati', 'jay@gmail.com', '$2y$10$pOLd.xc9v6SvCKFiK8JSC.SyPbsA4rwqISbqi.BWxIUPmA9Asp/KS'),
+(21, 'Parth Joshi', 'parthjoshi@gmail.com', '$2y$10$skSgElSmmfwEV3nlsHnX3O3adOoMeIJV1rPwJleKRWDKSHaK/ancC'),
+(22, 'Aryan Panchal', 'aryanpanchal123@gmail.com', '$2y$10$q/v8WEm87/rpzX9nu6tQ5.gqOy2LnMiHUvUEWDaJN2vi1mZOQz3P.'),
+(23, 'Karan Soni', 'karansoni81023@gmail.com', '$2y$10$hNZPGhqJ6V7.5YcJWmaB.uT30cGm1mAJ96OqjcxKMI3ZhHH10tmRi');
 
 -- --------------------------------------------------------
 
@@ -189,7 +174,10 @@ CREATE TABLE `submitrequest_tb` (
 --
 
 INSERT INTO `submitrequest_tb` (`request_id`, `request_info`, `request_desc`, `requester_name`, `requester_add1`, `requester_add2`, `requester_city`, `requester_state`, `requester_zip`, `requester_email`, `requester_mobile`, `request_date`) VALUES
-(56, 'Samsung Led', 'Model - 202100008011', 'Harsha', 'Lane-123', 'James Bond colony', 'Kannur', 'Kerala', 670301, 'harsha@gmail.com', 8128429890, '2024-03-26');
+(58, 'Panasonic LED TV', 'Model - 202100008011, display is blank not working', 'Mihir Menon', 'B-18, Alfa Park Society ', 'Motera Road, Sabaramati', 'Ahmedabad', 'Gujarat', 38005, 'mihir@gmail.com', 8128429890, '2024-04-22'),
+(59, 'Toshiba Air Conditioner', 'model: 202180118011,  Motor Service', 'Aryan Panchal', 'G-78, New Sarovar Apartment', 'Nehrunagar Road, Zansi ki Rani', 'Ahmedabad', 'Gujarat', 380008, 'aryanpanchal123@gmail.com', 7357544893, '2024-04-22'),
+(60, 'Samsung Fridge', 'Model: 202100998282024, cooling is not working', 'Karan Soni', 'B-123, New pearl avenue', 'Vastrapur', 'Ahmedabad', 'Gujarat', 380006, 'karansoni81023@gmail.com', 9099999999, '2024-04-24'),
+(61, 'Samsung Fridge', 'Model: 202100998282024, cooling is not working', 'Karan Soni', 'B-123, New pearl avenue', 'Vastrapur', 'Ahmedabad', 'Gujarat', 380006, 'karansoni81023@gmail.com', 9099999999, '2024-04-24');
 
 -- --------------------------------------------------------
 
@@ -210,7 +198,8 @@ CREATE TABLE `technician_tb` (
 --
 
 INSERT INTO `technician_tb` (`empid`, `empName`, `empCity`, `empMobile`, `empEmail`) VALUES
-(15, 'Jack Dorsey', 'New York', 9099197117, 'jack@gmail.com');
+(16, 'Modern India Technicians', 'Ahmedabad', 8128429899, 'modernindiatechnicians@gmail.com'),
+(17, 'Modern Gujarat Technicians', 'Ahmedabad', 7128427890, 'moderngujarattechinicians@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -272,37 +261,37 @@ ALTER TABLE `adminlogin_tb`
 -- AUTO_INCREMENT for table `assets_tb`
 --
 ALTER TABLE `assets_tb`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `assignwork_tb`
 --
 ALTER TABLE `assignwork_tb`
-  MODIFY `rno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `rno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `customer_tb`
 --
 ALTER TABLE `customer_tb`
-  MODIFY `custid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `custid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `requesterlogin_tb`
 --
 ALTER TABLE `requesterlogin_tb`
-  MODIFY `r_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `r_login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `submitrequest_tb`
 --
 ALTER TABLE `submitrequest_tb`
-  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `request_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `technician_tb`
 --
 ALTER TABLE `technician_tb`
-  MODIFY `empid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `empid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
